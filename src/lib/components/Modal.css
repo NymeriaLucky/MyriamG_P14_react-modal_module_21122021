@@ -1,0 +1,224 @@
+/* 
+  Default Css for the Modal :
+  modal__layout =  background around the modal body
+  modal__container = body of the modal
+  modal__contain = specifity for responsive contain of the modal
+  modal__close-btn = close button css
+*/
+
+.modal__layout {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.75);
+  bottom: 0;
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.modal__container {
+  background: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px #000;
+  max-width: 500px;
+  padding: 15px 30px;
+  position: relative;
+  text-align: left;
+  top: 250px;
+  left: 15px;
+  vertical-align: middle;
+  width: 90%;
+  z-index: 10;
+}
+
+.modal__contain {
+  overflow-y: auto;
+  overflow-x: clip;
+  min-height: 20px;
+  max-height: 500px;
+  z-index: 20;
+}
+
+.modal__close-btn {
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  background-size: cover;
+  display: block;
+  height: 35px;
+  position: absolute;
+  right: -12.5px;
+  text-indent: -9999px;
+  top: -12.5px;
+  width: 35px;
+}
+
+
+/** Animations Spinner and fade*/
+
+/*
+  modal__fade-in = animation when modal open
+  modal__fade-out = animation when modal close
+  @-webkit-keyframes fadeInOpacity and keyframes fadeInOpacity = opacity effect
+  @-webkit-keyframes fadeOutOpacity and keyframes fadeOutOpacity = opacity effect 
+*/
+
+.modal__fade-in {
+  -webkit-animation: fadeInOpacity;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 2s;
+  animation: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+
+.modal__fade-out {
+  -webkit-animation: fadeOutOpacity;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 2s;
+  animation: fadeOutOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOutOpacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOutOpacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*
+  modal__spinner-loading = fixed circle of the spinner
+  modal__spinner-loading:after = rotated circle of the spinner
+  @-webkit-keyframes spin and keyframes spin = rotate effect
+*/
+.modal__spinner-loading {
+  border-radius: 50px;
+  border: 6px solid #bec786;
+  height: 50px;
+  position: relative;
+  width: 50px;
+  top: 250px;
+  left: 140px;
+}
+
+.modal__spinner-loading:after {
+  content: "";
+  border-radius: 50px;
+  border: 6px solid transparent;
+  border-top-color: #4c640d;
+  bottom: -6px;
+  left: -6px;
+  right: -6px;
+  top: -6px;
+  position: absolute;
+  -webkit-animation: 1.5s linear infinite spin;
+  animation: 1.5s linear infinite spin;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/** Media Screen */
+
+@media screen and (min-width: 768px) {
+  .modal__container {
+    left: 110px;
+  }
+  .modal__spinner-loading {
+    left: 330px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .modal__container {
+    left: 240px;
+  }
+  .modal__spinner-loading {
+    left: 460px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .modal__container {
+    left: 450px;
+  }
+  .modal__spinner-loading {
+    left: 670px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .modal__container {
+    left: 680px;
+  }
+  .modal__spinner-loading {
+    left: 900px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .modal__container {
+    left: 1000px;
+  }
+  .modal__spinner-loading {
+    left: 1220px;
+  }
+}

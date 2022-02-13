@@ -1,0 +1,58 @@
+{
+  "name": "react-modal_module",
+  "version": "0.1.2",
+  "description": "Modal component for react",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "CONTRIBUTING.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NymeriaLucky/MyriamG_P14_react-modal_module_21122021.git"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-modal_module": "^0.1.2",
+    "react-scripts": "^5.0.0",
+    "styled-components": "^5.3.1",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.15.8"
+  }
+}
