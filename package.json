@@ -1,14 +1,13 @@
 {
   "name": "react-modal_module",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Modal component for react",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
     "dist",
-    "README.md",
-    "CONTRIBUTING.md"
+    "README.md"
   ],
   "repository": {
     "type": "git",
